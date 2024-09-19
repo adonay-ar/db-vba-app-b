@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ynS0dhjUFsk=",
+  "dgSpecHash": "1JqcYcGHd4g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Adonay\\Documents\\Visual Basic Projects\\Visual Basic Project\\Visual Basic Project.vbproj",
+  "projectFilePath": "C:\\Users\\Adonay\\Documents\\Visual Basic Projects\\db-vba-app-b\\Visual Basic Project.vbproj",
   "expectedPackageFiles": [
     "C:\\Users\\Adonay\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Adonay\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

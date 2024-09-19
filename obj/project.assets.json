@@ -1612,11 +1612,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adonay\\Documents\\Visual Basic Projects\\Visual Basic Project\\Visual Basic Project.vbproj",
+      "projectUniqueName": "C:\\Users\\Adonay\\Documents\\Visual Basic Projects\\db-vba-app-b\\Visual Basic Project.vbproj",
       "projectName": "Visual Basic Project",
-      "projectPath": "C:\\Users\\Adonay\\Documents\\Visual Basic Projects\\Visual Basic Project\\Visual Basic Project.vbproj",
+      "projectPath": "C:\\Users\\Adonay\\Documents\\Visual Basic Projects\\db-vba-app-b\\Visual Basic Project.vbproj",
       "packagesPath": "C:\\Users\\Adonay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adonay\\Documents\\Visual Basic Projects\\Visual Basic Project\\obj\\",
+      "outputPath": "C:\\Users\\Adonay\\Documents\\Visual Basic Projects\\db-vba-app-b\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Adonay\\AppData\\Roaming\\NuGet\\NuGet.Config",

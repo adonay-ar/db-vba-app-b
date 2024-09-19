@@ -8,6 +8,9 @@ Module Program
     Sub Main(args As String())
         Dim op As Integer
 
+        Dim nombre As String
+        Dim nie As Integer
+
         Connect()
 
         Do
@@ -23,8 +26,16 @@ Module Program
             Select Case op
                 Case 1
                     Console.WriteLine("Mostrar")
+                    Console.WriteLine(Show())
                 Case 2
                     Console.WriteLine("Insertar")
+                    Console.Write("Nombre: ")
+                    nombre = Console.ReadLine()
+
+                    Console.Write("NIE: ")
+                    nie = Console.ReadLine()
+
+                    Console.WriteLine(Insert(nombre, nie))
                 Case 3
                     Console.WriteLine("Actualizar")
                 Case 4
@@ -47,4 +58,38 @@ Module Program
 
         connection.Open()
     End Sub
+
+    Function Show() As String
+        Connect()
+
+        Dim q As String = "SELECT * FROM alumno"
+
+        Dim cmd As MySqlCommand = New MySqlCommand(q, connection)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+        Dim result As String = ""
+
+        While reader.Read()
+            result &= reader("id_alumno") 
+            result &= " - " 
+            result &= reader("nie_alumno")  
+            result &= " - "
+            result &= reader("nombre_alumno")
+            result &= vbCrLf ' Salto de línea
+        End While
+
+        return result
+    End Function
+
+    Function Insert(nombre As String, nie As Integer) As String
+        Connect()
+        Dim sql As String = "INSERT INTO alumno(nombre_alumno, nie_alumno) VALUES (@nombre, @nie)"
+        Dim cmd As MySqlCommand = New MySqlCommand(sql, connection)
+
+        cmd.Parameters.AddWithValue("@nombre", nombre)
+        cmd.Parameters.AddWithValue("@nie", nie)
+
+        cmd.ExecuteNonQuery()
+        return "Registro insertado"
+    End Function
 End Module
